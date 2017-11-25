@@ -38,7 +38,7 @@ function redrawQrCode() {
     svgXmlRow.style.removeProperty("display");
   }
   var svgXml = document.getElementById("svg-xml-output");
-  svgXml.value = "";
+  // svgXml.value = "";
 
   // Reset output images in case of early termination
   var canvas = document.getElementById("qrcode-canvas");
