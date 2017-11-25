@@ -23,6 +23,7 @@
 
 "use strict";
 
+
 function redrawQrCode() {
   // Show/hide rows based on bitmap/vector image output
   // var bitmapOutput = document.getElementById("output-format-bitmap").checked;
@@ -43,8 +44,8 @@ function redrawQrCode() {
   // Reset output images in case of early termination
   var canvas = document.getElementById("qrcode-canvas");
   var svg = document.getElementById("qrcode-svg");
+
   canvas.style.display = "none";
-  svg.style.display = "none";
 
   // Returns a QrCode.Ecc object based on the radio buttons in the HTML form.
   function getInputErrorCorrectionLevel() {
@@ -170,4 +171,6 @@ function handleVersionMinMax(which) {
   redrawQrCode();
 }
 
-redrawQrCode();
+window.onload = function() {
+  redrawQrCode();
+}

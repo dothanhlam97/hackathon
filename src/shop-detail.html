@@ -27,6 +27,26 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <style include="shop-common-styles shop-button shop-select">
 
+      html {
+            font-family: sans-serif;
+        }
+
+        td {
+            vertical-align: top;
+            padding-top: 0.2em;
+            padding-bottom: 0.2em;
+        }
+
+        td:first-child {
+            white-space: pre;
+        }
+
+        input[type=radio]+label,
+        input[type=checkbox]+label {
+            margin-left: 0.1em;
+            margin-right: 0.7em;
+        }
+
       :host {
         display: block;
       }
@@ -191,8 +211,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <h2>Description</h2>
           <p id="desc"></p>
         </div>
+        
         <shop-button responsive>
-          
           <button on-click="_addToCart" aria-label="Add this item to cart">Add to Cart</button>
         </shop-button>
       </div>
@@ -209,7 +229,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   </template>
 
-  
+  <script type="application/javascript" src="../qrcode/qrcodegen.js"></script>
+  <script type="application/javascript" src="../qrcode/qrcodegen-demo.js"></script>
 
   <script>
 
@@ -252,7 +273,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               // unescape it ("<br>") and set it as innerHTML.
               let text = item ? item.description : '';
               this.$.desc.innerHTML = this._unescapeText(text);
-
               // Reset the select menus.
               this.$.quantitySelect.value = '1';
               this.$.sizeSelect.value = 'M';
