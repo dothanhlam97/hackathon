@@ -159,9 +159,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <!--
       app-route provides the name of the category and the item.
     -->
-    <p id="id_qrcode">
-              [[_GernerateQR(item.idImage)]]
-        </p>
+
     <app-route
         route="[[route]]"
         pattern="/:category/:item"
@@ -219,9 +217,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <shop-button responsive>
           
           <button on-click="_addToCart" aria-label="Add this item to cart">Add to Cart</button>
+          <br>
+          <br>
         </shop-button>
       </div>
     </div>
+
+    <p id="id_qrcode">
+              [[_GernerateQR(item.idImage)]]
+    </p>
 
     <!--
       shop-network-warning shows a warning message when the items can't be rendered due
@@ -328,19 +332,38 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       _GernerateQR(idSanPham){
-        var qrcode = new QRCode(this.id, {
-            text: idSanPham,
-            width:100,
-            height:100,
-            colorDark:"#000000",
-            colorLight:"#ffffff",
-            correctLevel:QRCode.CorrectLevel.H
-          });
+          var qrcode = new QRCode(this.id, {
+                 text: idSanPham,
+                 width:100,
+                 height:100,
+                 colorDark:"#000000",
+                 colorLight:"#ffffff",
+                 correctLevel: QRCode.CorrectLevel.H
+                });
+
+          if(document.getElementsByTagName("img")[5] != null)
+          {
+             var x = document.getElementsByTagName("img")[5];
+             var y = document.getElementsByTagName("shop-button")[4];
+             if(y.parentElement)
+             {
+                y.parentElement.appendChild(x);
+             }
+             else
+             {
+                location.reload(true);
+             }
+          }
+
+
+          
       }
+
 
     }
 
     customElements.define(ShopDetail.is, ShopDetail);
+    
   </script>
 
 </dom-module>
