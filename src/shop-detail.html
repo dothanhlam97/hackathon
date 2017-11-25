@@ -332,14 +332,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       _GernerateQR(idSanPham){
-        var qrcode = new QRCode(this.id, {
-            text: idSanPham,
-            width:100,
-            height:100,
-            colorDark:"#000000",
-            colorLight:"#ffffff",
-            correctLevel: QRCode.CorrectLevel.H
-          });
+          var qrcode = new QRCode(this.id, {
+                 text: idSanPham,
+                 width:100,
+                 height:100,
+                 colorDark:"#000000",
+                 colorLight:"#ffffff",
+                 correctLevel: QRCode.CorrectLevel.H
+                });
 
           if(document.getElementsByTagName("img")[5] != null)
           {
@@ -351,10 +351,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
              }
              else
              {
-               qrcode.clear();
+                location.reload(true);
              }
           }
-         
+
+
           
       }
 
