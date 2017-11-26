@@ -13,12 +13,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <dom-module id="shop-button">
   <template>
     <style>
-
       shop-button {
         display: inline-block;
       }
 
-      shop-button > * {
+      shop-button>* {
         display: inline-block;
         box-sizing: border-box;
         border: 2px solid #000;
@@ -36,11 +35,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         -webkit-appearance: none;
       }
 
-      shop-button > *:focus {
+      shop-button>*:focus {
         background-color: #c5cad3;
       }
 
-      shop-button > *:active {
+      shop-button>*:active {
         background-color: #000;
         color: #FFF;
       }
@@ -54,7 +53,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           z-index: 1;
         }
 
-        shop-button[responsive] > * {
+        shop-button[responsive]>* {
           background-color: var(--app-accent-color);
           border: none;
           color: white;
@@ -64,12 +63,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           font-size: 15px;
         }
 
-        shop-button[responsive] > *:focus {
+        shop-button[responsive]>*:focus {
           background-color: var(--app-accent-color);
         }
-
       }
-
     </style>
   </template>
 </dom-module>
