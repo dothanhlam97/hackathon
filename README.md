@@ -36,3 +36,23 @@ List items
 ![GitHub Logo](/demo/image3-web-demo.png)
  
  Item Details. You can scan QR code to try dressing up before "Add to cart".
+ 
+ ### App Android
+ 
+ #### Build:
+ 
+ Install NDK 
+ 
+ Install Stmobile
+ 
+ Install omoshiroilib
+ 
+ #### Screenshot:
+ 
+  ![GitHub Logo](/demo/image1-app-demo.png)
+ 
+ Scanning QR code on mobile 
+ 
+  ![GitHub Logo](/demo/image2-web-demo.png)
+ 
+ 
