@@ -1,0 +1,173 @@
+{
+    "filterlist": [
+        {
+            "data": {
+                "audio": "",
+                "soundPlayMode": 0,
+                "foldername": "strongman",
+                "maxcount": 2,
+                "pointindexarray": [
+                    [
+                        9,
+                        16,
+                        23,
+                        46,
+                        74,
+                        77,
+                        84,
+                        90
+                    ],
+                    [
+                        5,
+                        16,
+                        27,
+                        46,
+                        74,
+                        77,
+                        84,
+                        90
+                    ]
+                ],
+                "reslist": [],
+                "resloadtype": 0,
+                "timeparam": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                ],
+                "triggerType": 2
+            },
+            "name": "strongman",
+            "reload": 1,
+            "type": "shapechange"
+        },
+        {
+            "data": {
+			"audio": "",
+			"alignAudio": 0,
+			"maxcount": 5,
+			"alignX": 125,
+            "alignY": 145,
+            "scaleWidth": 160,
+            "leftIndex": 0,
+            "rightIndex": 32,
+            "alignIndexLst": [
+                43
+            ],
+            "type": "D",
+            "width": 237,
+            "height": 140,
+            "frames": 0,
+            "folderName": "er",
+            "frameDuration": 50,
+            "triggerType": 2,
+            "looping": 1,
+            "showUtilFinish": 0
+            },
+            "name": "er",
+            "reload": 1,
+            "type": "dsticker"
+        },
+        {
+            "data": {
+            "audio": "",
+            "alignAudio": 0,
+            "maxcount": 5,
+            "alignX": 161,
+            "alignY": 90,
+            "scaleWidth": 200,
+            "leftIndex": 0,
+            "rightIndex": 32,
+            "alignIndexLst": [
+                16
+            ],
+            "type": "D",
+            "width": 322,
+            "height": 318,
+            "frames": 56,
+            "folderName": "foot",
+            "frameDuration": 50,
+            "triggerType": 2,
+            "looping": 1,
+            "showUtilFinish": 0
+            },
+            "name": "foot",
+            "reload": 1,
+            "type": "dsticker"
+        },
+        {
+            "data": {
+            "audio": "",
+            "alignAudio": 0,
+            "maxcount": 5,
+            "alignX": 120,
+            "alignY": 90,
+            "scaleWidth": 200,
+            "leftIndex": 0,
+            "rightIndex": 32,
+            "alignIndexLst": [
+                46
+            ],
+            "type": "D",
+            "width": 240,
+            "height": 127,
+            "frames": 0,
+            "folderName": "nose",
+            "frameDuration": 50,
+            "triggerType": 2,
+            "looping": 1,
+            "showUtilFinish": 0
+            },
+            "name": "nose",
+            "reload": 1,
+            "type": "dsticker"
+        },
+        {
+            "data": {
+            "audio": "",
+            "alignAudio": 0,
+            "maxcount": 5,
+            "showTop": 1,
+            "type": "V",
+            "width": 360,
+            "height": 640,
+            "frames": 56,
+            "folderName": "bg",
+            "frameDuration": 50,
+            "triggerType": 2,
+            "looping": 1,
+            "showUtilFinish": 0
+            },
+            "name": "bg",
+            "reload": 1,
+            "type": "dsticker"
+        }
+    ],
+    "initsection": "catfoot",
+    "sections": [
+        {
+            "duration": -1,
+            "filterlist": [
+                "strongman",
+                "er",
+                "foot",
+                "nose",
+                "bg"
+            ],
+            "sectionname": "catfoot",
+            "tips": ""
+        }
+    ],
+    "statemachine": [
+        {
+            "oldsection": "catfoot",
+            "triggerType": 1111,
+            "newsection": "catfoot"
+        }
+    ]
+}
