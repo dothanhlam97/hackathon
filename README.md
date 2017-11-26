@@ -24,3 +24,7 @@ Start the development server
 
  polymer serve
  
+ #### Screenshot:
+ ![GitHub Logo](/demo/image1-web-demo.png)
+Format: ![Alt Text](url)
+
