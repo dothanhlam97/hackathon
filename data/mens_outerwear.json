@@ -30,6 +30,16 @@
     "idImage":"Hat_10-14157"
   },
   {
+    "name":"Goorin-104",
+    "title":"Goorin 104",
+    "category":"Hat",
+    "price":60.85,
+    "description":"In search of the perfect layering piece? This lightweight, triblend pullover is ultra soft and ideal for all seasons.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Features:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;50% polyester, 38% cotton, 12% rayon triblend.&lt;/li&gt;&lt;li&gt;Available in black with the white Google logo screenprinted at left bicep.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;",
+    "image":"data/images/10-14152B.jpg",
+    "largeImage":"data/images/10-14152A.jpg",
+    "idImage":"Hat_10-14152"
+  },
+  {
     "name":"Bailey-103",
     "title":"Bailey 103",
     "category":"Hat",
@@ -78,15 +88,5 @@
     "image":"data/images/10-14158B.jpg",
     "largeImage":"data/images/10-14158A.jpg",
     "idImage":"Hat_10-14158"
-  },
-  {
-    "name":"Goorin-104",
-    "title":"Goorin 104",
-    "category":"Hat",
-    "price":60.85,
-    "description":"In search of the perfect layering piece? This lightweight, triblend pullover is ultra soft and ideal for all seasons.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Features:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;50% polyester, 38% cotton, 12% rayon triblend.&lt;/li&gt;&lt;li&gt;Available in black with the white Google logo screenprinted at left bicep.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;",
-    "image":"data/images/10-14152B.jpg",
-    "largeImage":"data/images/10-14152A.jpg",
-    "idImage":"Hat_10-14152"
   }
 ]
