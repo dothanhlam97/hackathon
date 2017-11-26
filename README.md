@@ -12,7 +12,7 @@ A online shopping website + app that supports dress up and make up online before
 
 #### Build: 
 
-Install polymer-CLI:[a link](https://www.polymer-project.org/1.0/start/)
+[Install polymer-CLI:](https://www.polymer-project.org/1.0/start/)
 
   npm install -g polymer 
 
