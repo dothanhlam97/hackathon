@@ -22,32 +22,31 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <template>
 
     <style type="text/css">
-        
+
     </style>
 
     <style include="shop-common-styles shop-button shop-select">
-
       html {
-            font-family: sans-serif;
-        }
+        font-family: sans-serif;
+      }
 
-        td {
-            vertical-align: top;
-            padding-top: 0.2em;
-            padding-bottom: 0.2em;
-        }
+      td {
+        vertical-align: top;
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+      }
 
-        td:first-child {
-            white-space: pre;
-        }
+      td:first-child {
+        white-space: pre;
+      }
 
-        input[type=radio]+label,
-        input[type=checkbox]+label {
-            margin-left: 0.1em;
-            margin-right: 0.7em;
-        }
+      input[type=radio]+label,
+      input[type=checkbox]+label {
+        margin-left: 0.1em;
+        margin-right: 0.7em;
+      }
 
-      :host {
+       :host {
         display: block;
       }
 
@@ -63,7 +62,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         max-width: 600px;
         --shop-image-img: {
           @apply --layout-fit;
-        };
+        }
+        ;
       }
 
       shop-image::before {
@@ -85,10 +85,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       h1 {
-        font-size: 24px;
+        font-size: 30px;
         font-weight: 500;
         line-height: 28px;
         margin: 0;
+        color: dodgerblue;
       }
 
       .price {
@@ -101,12 +102,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         margin: 32px 0;
       }
 
-      .description > h2 {
+      .description>h2 {
         margin: 16px 0;
-        font-size: 13px;
+        font-size: 17px;
       }
 
-      .description > p {
+      .description>p {
         margin: 0;
         color: var(--app-secondary-color);
       }
@@ -116,8 +117,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         border-top: 1px solid #ccc;
       }
 
-      shop-select > select {
+      shop-select>label {
         font-size: 16px;
+      }
+
+      shop-select>select {
+        font-size: 20px;
         padding: 16px 24px 16px 70px;
       }
 
@@ -150,37 +155,28 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           font-size: inherit;
           margin: 12px 0 32px;
         }
-
       }
-
     </style>
-    
+
 
     <!--
       app-route provides the name of the category and the item.
     -->
 
-    <app-route
-        route="[[route]]"
-        pattern="/:category/:item"
-        data="{{routeData}}"></app-route>
+    <app-route route="[[route]]" pattern="/:category/:item" data="{{routeData}}"></app-route>
 
     <!--
       shop-category-data provides the item data for a given category and item name.
     -->
-    <shop-category-data
-        id="categoryData"
-        category-name="[[routeData.category]]"
-        item-name="[[routeData.item]]"
-        item="{{item}}"
-        failure="{{failure}}"></shop-category-data>
+    <shop-category-data id="categoryData" category-name="[[routeData.category]]" item-name="[[routeData.item]]" item="{{item}}"
+      failure="{{failure}}"></shop-category-data>
 
     <div id="content" hidden$="[[failure]]">
       <shop-image alt="[[item.title]]" src="[[item.largeImage]]"></shop-image>
       <div class="detail" has-content$="[[_isDefined(item)]]">
         <h1>[[item.title]]</h1>
         <div class="price">[[_formatPrice(item.price)]]</div>
-        <div class="price">Mã sản phẩm: [[item.idImage]]</div>
+        <!--<div class="price">Mã sản phẩm: [[item.idImage]]</div>-->
         <div class="pickers">
           <shop-select>
             <label id="sizeLabel" prefix>Size</label>
@@ -215,7 +211,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         </div>
 
         <shop-button responsive>
-          
+
           <button on-click="_addToCart" aria-label="Add this item to cart">Add to Cart</button>
           <br>
           <br>
@@ -224,57 +220,56 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </div>
 
     <p id="id_qrcode">
-              [[_GernerateQR(item.idImage)]]
+      [[_GernerateQR(item.idImage)]]
     </p>
 
     <!--
       shop-network-warning shows a warning message when the items can't be rendered due
       to network conditions.
     -->
-    <shop-network-warning
-        hidden$="[[!failure]]"
-        offline="[[offline]]"
-        on-try-reconnect="_tryReconnect"></shop-network-warning>
+    <shop-network-warning hidden$="[[!failure]]" offline="[[offline]]" on-try-reconnect="_tryReconnect"></shop-network-warning>
 
   </template>
 
-  
+
 
 
   <script type="text/javascript" src="../qrcode/qrcode.min.js"></script>
 
   <script>
-
-
     class ShopDetail extends Polymer.Element {
 
       static get is() { return 'shop-detail'; }
 
-      static get properties() { return {
+      static get properties() {
+        return {
 
-        item: Object,
+          item: Object,
 
-        route: Object,
+          route: Object,
 
-        routeData: Object,
+          routeData: Object,
 
-        visible: {
-          type: Boolean,
-          value: false
-        },
+          visible: {
+            type: Boolean,
+            value: false
+          },
 
-        offline: {
-          type: Boolean,
-          observer: '_offlineChanged'
-        },
+          offline: {
+            type: Boolean,
+            observer: '_offlineChanged'
+          },
 
-        failure: Boolean
+          failure: Boolean
 
-      }}
+        }
+      }
 
-      static get observers() { return [
-        '_itemChanged(item, visible)'
-      ]}
+      static get observers() {
+        return [
+          '_itemChanged(item, visible)'
+        ]
+      }
 
       _itemChanged(item, visible) {
         if (visible) {
@@ -292,7 +287,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 bubbles: true, composed: true, detail: {
                   category: item ? item.category : '',
                   title: item ? item.title : ''
-                }}));
+                }
+              }));
             })
         }
       }
@@ -314,7 +310,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             item: this.item,
             quantity: parseInt(this.$.quantitySelect.value, 10),
             size: this.$.sizeSelect.value
-          }}));
+          }
+        }));
       }
 
       _isDefined(item) {
@@ -331,39 +328,35 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
       }
 
-      _GernerateQR(idSanPham){
-          var qrcode = new QRCode(this.id, {
-                 text: idSanPham,
-                 width:100,
-                 height:100,
-                 colorDark:"#000000",
-                 colorLight:"#ffffff",
-                 correctLevel: QRCode.CorrectLevel.H
-                });
+      _GernerateQR(idSanPham) {
+        var qrcode = new QRCode(this.id, {
+          text: idSanPham,
+          width: 100,
+          height: 100,
+          colorDark: "#000000",
+          colorLight: "#ffffff",
+          correctLevel: QRCode.CorrectLevel.H
+        });
 
-          if(document.getElementsByTagName("img")[5] != null)
-          {
-             var x = document.getElementsByTagName("img")[5];
-             var y = document.getElementsByTagName("shop-button")[4];
-             if(y.parentElement)
-             {
-                y.parentElement.appendChild(x);
-             }
-             else
-             {
-                location.reload(true);
-             }
+        if (document.getElementsByTagName("img")[5] != null) {
+          var x = document.getElementsByTagName("img")[5];
+          var y = document.getElementsByTagName("shop-button")[4];
+          if (y.parentElement) {
+            y.parentElement.appendChild(x);
           }
+          else {
+            location.reload(true);
+          }
+        }
 
 
-          
+
       }
 
 
     }
 
     customElements.define(ShopDetail.is, ShopDetail);
-    
   </script>
 
 </dom-module>

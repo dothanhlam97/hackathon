@@ -27,8 +27,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <template>
 
     <style>
-
-      :host {
+       :host {
         display: block;
         position: relative;
         padding-top: 130px;
@@ -52,7 +51,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.2);
           height: 10px;
           bottom: -10px;
-        };
+        }
+        ;
       }
 
       paper-icon-button {
@@ -64,7 +64,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       .logo a {
-        font-size: 16px;
+        font-size: 40px;
         font-weight: 600;
         letter-spacing: 0.3em;
         color: var(--app-primary-color);
@@ -93,7 +93,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         overflow: hidden;
       }
 
-      :host(:not([page=detail])) .back-btn {
+       :host(:not([page=detail])) .back-btn {
         display: none;
       }
 
@@ -106,10 +106,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         height: 66px;
       }
 
-      shop-tabs, shop-tab {
+      shop-tabs,
+      shop-tab {
         --shop-tab-overlay: {
           border-bottom: 2px solid var(--app-accent-color);
-        };
+        }
+        ;
       }
 
       shop-tabs {
@@ -186,12 +188,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         line-height: 24px;
       }
 
-      footer > a {
+      footer>a {
         color: var(--app-secondary-color);
         text-decoration: none;
       }
 
-      footer > a:hover {
+      footer>a:hover {
         text-decoration: underline;
       }
 
@@ -204,10 +206,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         color: white;
         text-transform: uppercase;
       }
-
       /* small screen */
+
       @media (max-width: 767px) {
-        :host {
+         :host {
           padding-top: 64px;
         }
 
@@ -215,11 +217,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           display: block;
         }
 
-        :host([page=detail]) .menu-btn {
+         :host([page=detail]) .menu-btn {
           display: none;
         }
       }
-
     </style>
 
     <shop-analytics key="UA-39334307-16"></shop-analytics>
@@ -227,11 +228,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       app-location and app-route elements provide the state of the URL for the app.
     -->
     <app-location route="{{route}}"></app-location>
-    <app-route
-        route="{{route}}"
-        pattern="/:page"
-        data="{{routeData}}"
-        tail="{{subroute}}"></app-route>
+    <app-route route="{{route}}" pattern="/:page" data="{{routeData}}" tail="{{subroute}}"></app-route>
 
     <iron-media-query query="max-width: 767px" query-matches="{{smallScreen}}"></iron-media-query>
 
@@ -244,20 +241,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       shop-cart-data maintains the state of the user's shopping cart (in localstorage) and
       calculates the total amount.
     -->
-    <shop-cart-data
-        id="cart"
-        cart="{{cart}}"
-        num-items="{{numItems}}"
-        total="{{total}}"></shop-cart-data>
+    <shop-cart-data id="cart" cart="{{cart}}" num-items="{{numItems}}" total="{{total}}"></shop-cart-data>
 
     <app-header role="navigation" id="header" effects="waterfall" condenses reveals>
       <app-toolbar>
         <div class="left-bar-item">
-          <paper-icon-button
-              class="menu-btn"
-              icon="menu"
-              on-click="_toggleDrawer"
-              aria-label="Categories">
+          <paper-icon-button class="menu-btn" icon="menu" on-click="_toggleDrawer" aria-label="Categories">
           </paper-icon-button>
           <a class="back-btn" href="/list/[[categoryName]]" tabindex="-1">
             <paper-icon-button icon="arrow-back" aria-label="Go back"></paper-icon-button>
@@ -276,14 +265,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <div id="tabContainer" sticky$="[[_shouldShowTabs]]" hidden$="[[!_shouldShowTabs]]">
         <dom-if if="[[_shouldRenderTabs]]">
           <template>
-            <shop-tabs
-                selected="[[categoryName]]"
-                attr-for-selected="name">
+            <shop-tabs selected="[[categoryName]]" attr-for-selected="name">
               <dom-repeat items="[[categories]]" as="category" initial-count="4">
                 <template>
-                <shop-tab name="[[category.name]]">
-                  <a href="/list/[[category.name]]">[[category.title]]</a>
-                </shop-tab>
+                  <shop-tab name="[[category.name]]">
+                    <a href="/list/[[category.name]]">[[category.title]]</a>
+                  </shop-tab>
                 </template>
               </dom-repeat>
             </shop-tabs>
@@ -295,16 +282,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <!-- Lazy-create the drawer for small screen sizes. -->
     <dom-if if="[[_shouldRenderDrawer]]">
       <template>
-      <!-- Two-way bind `drawerOpened` since app-drawer can update `opened` itself. -->
-      <app-drawer opened="{{drawerOpened}}" swipe-open tabindex="0">
-        <iron-selector role="navigation" class="drawer-list" selected="[[categoryName]]" attr-for-selected="name">
-          <dom-repeat items="[[categories]]" as="category" initial-count="4">
-            <template>
-              <a name="[[category.name]]" href="/list/[[category.name]]">[[category.title]]</a>
-            </template>
-          </dom-repeat>
-        </iron-selector>
-      </app-drawer>
+        <!-- Two-way bind `drawerOpened` since app-drawer can update `opened` itself. -->
+        <app-drawer opened="{{drawerOpened}}" swipe-open tabindex="0">
+          <iron-selector role="navigation" class="drawer-list" selected="[[categoryName]]" attr-for-selected="name">
+            <dom-repeat items="[[categories]]" as="category" initial-count="4">
+              <template>
+                <a name="[[category.name]]" href="/list/[[category.name]]">[[category.title]]</a>
+              </template>
+            </dom-repeat>
+          </iron-selector>
+        </app-drawer>
       </template>
     </dom-if>
 
@@ -324,8 +311,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </iron-pages>
 
     <footer>
-      <a href="https://www.polymer-project.org/1.0/toolbox/">Made by Polymer</a>
-      <div class="demo-label">Demo Only</div>
+      <a href="http://hackathon.binhduongsmartcity.vn/idea/636469926750627257">Made by iLovePTH</a>
+      <div class="demo-label">Demo</div>
     </footer>
 
     <!-- a11y announcer -->
@@ -334,7 +321,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </template>
 
   <script>
-
     // performance logging
     window.performance && performance.mark && performance.mark('shop-app - before register');
 
@@ -342,34 +328,38 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       static get is() { return 'shop-app'; }
 
-      static get properties() { return {
-        page: {
-          type: String,
-          reflectToAttribute: true,
-          observer: '_pageChanged'
-        },
+      static get properties() {
+        return {
+          page: {
+            type: String,
+            reflectToAttribute: true,
+            observer: '_pageChanged'
+          },
 
-        numItems: {
-          type: Number,
-          value: 0
-        },
+          numItems: {
+            type: Number,
+            value: 0
+          },
 
-        _shouldShowTabs: {
-          computed: '_computeShouldShowTabs(page, smallScreen)'
-        },
+          _shouldShowTabs: {
+            computed: '_computeShouldShowTabs(page, smallScreen)'
+          },
 
-        _shouldRenderTabs: {
-          computed: '_computeShouldRenderTabs(_shouldShowTabs, loadComplete)'
-        },
+          _shouldRenderTabs: {
+            computed: '_computeShouldRenderTabs(_shouldShowTabs, loadComplete)'
+          },
 
-        _shouldRenderDrawer: {
-          computed: '_computeShouldRenderDrawer(smallScreen, loadComplete)'
+          _shouldRenderDrawer: {
+            computed: '_computeShouldRenderDrawer(smallScreen, loadComplete)'
+          }
         }
-      }}
+      }
 
-      static get observers() { return [
-        '_routePageChanged(routeData.page)'
-      ]}
+      static get observers() {
+        return [
+          '_routePageChanged(routeData.page)'
+        ]
+      }
 
       constructor() {
         super();
@@ -381,17 +371,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         // Custom elements polyfill safe way to indicate an element has been upgraded.
         this.removeAttribute('unresolved');
         // listen for custom events
-        this.addEventListener('add-cart-item', (e)=>this._onAddCartItem(e));
-        this.addEventListener('set-cart-item', (e)=>this._onSetCartItem(e));
-        this.addEventListener('clear-cart', (e)=>this._onClearCart(e));
-        this.addEventListener('change-section', (e)=>this._onChangeSection(e));
-        this.addEventListener('announce', (e)=>this._onAnnounce(e));
-        this.addEventListener('dom-change', (e)=>this._domChange(e));
-        this.addEventListener('show-invalid-url-warning', (e)=>this._onFallbackSelectionTriggered(e));
+        this.addEventListener('add-cart-item', (e) => this._onAddCartItem(e));
+        this.addEventListener('set-cart-item', (e) => this._onSetCartItem(e));
+        this.addEventListener('clear-cart', (e) => this._onClearCart(e));
+        this.addEventListener('change-section', (e) => this._onChangeSection(e));
+        this.addEventListener('announce', (e) => this._onAnnounce(e));
+        this.addEventListener('dom-change', (e) => this._domChange(e));
+        this.addEventListener('show-invalid-url-warning', (e) => this._onFallbackSelectionTriggered(e));
         // listen for online/offline
         Polymer.RenderStatus.afterNextRender(this, () => {
-          window.addEventListener('online', (e)=>this._notifyNetworkStatus(e));
-          window.addEventListener('offline', (e)=>this._notifyNetworkStatus(e));
+          window.addEventListener('online', (e) => this._notifyNetworkStatus(e));
+          window.addEventListener('offline', (e) => this._notifyNetworkStatus(e));
         });
       }
 
@@ -411,7 +401,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           // home route is eagerly loaded
           if (page == 'home') {
             this._pageLoaded(Boolean(oldPage));
-          // other routes are lazy loaded
+            // other routes are lazy loaded
           } else {
             // When a load failed, it triggered a 404 which means we need to
             // eagerly load the 404 page definition
@@ -441,7 +431,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             Polymer.importHref(this.resolveUrl('lazy-resources.html'), () => {
               // Register service worker if supported.
               if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('service-worker.js', {scope: '/'});
+                navigator.serviceWorker.register('service-worker.js', { scope: '/' });
               }
               this._notifyNetworkStatus();
               this.loadComplete = true;
@@ -452,7 +442,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       _notifyNetworkStatus() {
         let oldOffline = this.offline;
-        this.offline =  !navigator.onLine;
+        this.offline = !navigator.onLine;
         // Show the snackbar if the user is offline when starting a new session
         // or if the network status changed.
         if (this.offline || (!this.offline && oldOffline === true)) {
@@ -461,7 +451,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             this.root.appendChild(this._networkSnackbar);
           }
           this._networkSnackbar.innerHTML = this.offline ?
-              'You are offline' : 'You are online';
+            'You are offline' : 'You are online';
           this._networkSnackbar.open();
         }
       }
@@ -573,7 +563,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
 
     customElements.define(ShopApp.is, ShopApp);
-
   </script>
 
 </dom-module>

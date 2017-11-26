@@ -17,12 +17,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <template>
 
     <style include="shop-button">
-
       .image-link {
         outline: none;
       }
 
-      .image-link > shop-image::after {
+      .image-link>shop-image::after {
         display: block;
         content: '';
         position: absolute;
@@ -40,7 +39,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         outline: -webkit-focus-ring-color auto 5px;
       }
 
-      .image-link:focus > shop-image::after {
+      .image-link:focus>shop-image::after {
         opacity: 1;
       }
 
@@ -68,17 +67,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           left: -9999px;
           right: -9999px;
           max-width: none;
-        };
+        }
+        ;
       }
 
       h2 {
-        font-size: 1.3em;
+        font-size: 2.5em;
         font-weight: 500;
         margin: 32px 0;
       }
 
-      .item:nth-of-type(3) > h2,
-      .item:nth-of-type(4) > h2 {
+      .item:nth-of-type(3)>h2,
+      .item:nth-of-type(4)>h2 {
         font-size: 1.1em;
       }
 
@@ -91,12 +91,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           margin: 24px 0;
         }
 
-        .item:nth-of-type(3) > shop-button > a,
-        .item:nth-of-type(4) > shop-button > a {
+        .item:nth-of-type(3)>shop-button>a,
+        .item:nth-of-type(4)>shop-button>a {
           padding: 8px 24px;
         }
       }
-
     </style>
 
     <dom-repeat items="[[categories]]">
@@ -116,35 +115,36 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </template>
 
   <script>
-
     class ShopHome extends Polymer.Element {
 
       static get is() { return 'shop-home'; }
 
-      static get properties() { return {
+      static get properties() {
+        return {
 
-        categories: {
-          type: Array
-        },
+          categories: {
+            type: Array
+          },
 
-        visible: {
-          type: Boolean,
-          observer: '_visibleChanged'
+          visible: {
+            type: Boolean,
+            observer: '_visibleChanged'
+          }
+
         }
-
-      }}
+      }
 
       _visibleChanged(visible) {
         if (visible) {
           this.dispatchEvent(new CustomEvent('change-section', {
-            bubbles: true, composed: true, detail: {title: 'Home'}}));
+            bubbles: true, composed: true, detail: { title: 'Home' }
+          }));
         }
       }
 
     }
 
     customElements.define(ShopHome.is, ShopHome);
-
   </script>
 
 </dom-module>

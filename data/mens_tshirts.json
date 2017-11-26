@@ -20,66 +20,6 @@
     "idImage":"eyeGlass_10-13256"
   },
   {
-    "name":"Rayban-102",
-    "title":"Rayban 102",
-    "category":"eyeglass",
-    "price":14.95,
-    "description":"Mr. Kent has nothing on Super Droid, especially since this robot has only one weakness-a sweet tooth (considering all of its confectionery-themed versions)! This adorable Bella+Canvas tee features a unisex fit that is sure to please both male and female Android fans.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Additional Features:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;100% combed, ringspun cotton.&lt;/li&gt;&lt;li&gt;Unisex fit.&lt;/li&gt;&lt;li&gt;Tag-free label for added comfort.&lt;/li&gt;&lt;li&gt;Available in royal blue with the Super Droid robot screen printed at center chest.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Sizes run smaller than normal. Reference men's sizing chart for additional details.&lt;/b&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;",
-    "image":"data/images/10-13239B.jpg",
-    "largeImage":"data/images/10-13239A.jpg",
-    "idImage":"eyeGlass_10-13239"
-  },
-  {
-    "name":"Rayban-103",
-    "title":"Rayban 103",
-    "category":"eyeglass",
-    "price":15.8,
-    "description":"&lt;div&gt;A casual-cool, vintage-inspired tee perfect for all. Just remember that the best part about any classic is that it only improves with age. The more you wash it, the softer it feels.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Features:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;65% polyester, 35% cotton.&lt;/li&gt;&lt;li&gt;Available in heather navy, blue, purple or green with the white Google logo screened across center chest of each.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;",
-    "image":"data/images/10-13264B.jpg",
-    "largeImage":"data/images/10-13264A.jpg",
-    "idImage":"eyeGlass_10-13264"
-  },
-  {
-    "name":"Gentle+Monster-100",
-    "title":"Gentle Monster 100",
-    "category":"eyeglass",
-    "price":16.9,
-    "description":"Word on the street is that 'black is the new black.' Embellish your basic fashion statement with the Google logo on an authentic American Apparel t-shirt.&amp;nbsp;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Features:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;100% organic combed cotton for ultimate softness.&amp;nbsp;&lt;/li&gt;&lt;li&gt;Flattering fit.&amp;nbsp;&lt;/li&gt;&lt;li&gt;Available in Black with the Google logo screen printed in White across center chest.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Sizes run smaller than normal.&lt;/b&gt;&amp;nbsp;&lt;b&gt;Please reference men's size chart for fit.&lt;/b&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;",
-    "image":"data/images/10-13265B.jpg",
-    "largeImage":"data/images/10-13265A.jpg",
-    "idImage":"eyeglass-13265"
-  },
-  {
-    "name":"Gentle+Monster-101",
-    "title":"Gentle Monster 101",
-    "category":"eyeglass",
-    "price":15.7,
-    "description":"Do you live to explore? Are you the first to tell your friends about the best venues, restaurants and hot spots in town? If you're already a local guide, sport your t-shirt with pride. This ultra soft style is comfortable enough to wear all day long - perfect for all of those adventures you'll tell us about later. To learn more about Local Guides, visit us here:&amp;nbsp;https://www.google.com/local/guides/.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Features:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;52% combed, ring-spun cotton / 48% polyester.&lt;/li&gt;&lt;li&gt;Retail fit.&lt;/li&gt;&lt;li&gt;Available in charcoal with the Local Guides logo screenprinted at front chest and Google logo screenprinted in white at left bicep.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;",
-    "image":"data/images/10-13280B.jpg",
-    "largeImage":"data/images/10-13280A.jpg",
-    "idImage":"eyeglass-13280"
-  },
-  {
-    "name":"Gentle+Monster-102",
-    "title":"Gentle Monster 102",
-    "category":"eyeglass",
-    "price":10.95,
-    "description":"Go anywhere in style when wearing this t-shirt featuring The Go Gopher. &amp;nbsp;Tee is made of 100% combed, ring-spun cotton jersey fabric. Available in teal with the Go Gopher screen printed on center.",
-    "image":"data/images/10-13213B.jpg",
-    "largeImage":"data/images/10-13213A.jpg",
-    "idImage":"eyeglass-13213"
-  },
-  {
-    "name":"Gentle+Monster-103",
-    "title":"Gentle Monster 103",
-    "category":"eyeglass",
-    "price":8.75,
-    "description":"Display your undying love for Androids everywhere in this 100% certified organic ringspun cotton tee.&amp;nbsp;\n&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Additional Features:&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;100% combed, ring-spun cotton.&amp;nbsp;&lt;/li&gt;&lt;li&gt;Preshrunk for fashion fit.&amp;nbsp;&lt;/li&gt;&lt;li&gt;Tearaway label.&amp;nbsp;\n&lt;/li&gt;&lt;li&gt;Available in heather green with the full color Android robot screen printed across center chest.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;",
-    "image":"data/images/10-13285B.jpg",
-    "largeImage":"data/images/10-13285A.jpg",
-    "idImage":"eyeglass-13285"
-  },
-  {
     "name":"Christian+Dior-100",
     "title":"Christian Dior 100",
     "category":"eyeglass",
@@ -87,7 +27,7 @@
     "description":"What’s better than an organic cotton t-shirt with the Android logo?  How about a t-shirt with the Android walking a dog.&amp;nbsp; &lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Features:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;100% smooth organic cotton.&lt;/li&gt;&lt;li&gt;Available in black with the Android design screenprinted at front chest.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Sizing runs smaller than normal. Please reference size chart before ordering.&lt;/b&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;",
     "image":"data/images/10-13018B.jpg",
     "largeImage":"data/images/10-13018A.jpg",
-    "idImage":"eyeglass-13018"
+    "idImage":"eyeglass_10-13018"
   },
   {
     "name":"Christian+Dior-101",
@@ -97,7 +37,7 @@
     "description":"Looking to add a little color to your wardrobe? This striking red tee shirt is made of 100% preshrunk organic cotton, so it's healthy for the environment as well as for your look.&amp;nbsp;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Features:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;Shoulder-to-shoulder tape.&lt;/li&gt;&lt;li&gt;Seamless collar.&lt;/li&gt;&lt;li&gt;Available in red with white Google logo screenprinted at center chest.&lt;/li&gt;&lt;li&gt;&lt;b&gt;**This shirt's cut is more of a generous t-shirt cut. Compared to the American Apparel shirts, sizing would run larger.**&amp;nbsp;&lt;/b&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;",
     "image":"data/images/10-13270B.jpg",
     "largeImage":"data/images/10-13270A.jpg",
-    "idImage":"eyeglass-13270"
+    "idImage":"eyeglass_10-13270"
   },
   {
     "name":"Christian+Dior-102",
@@ -107,7 +47,7 @@
     "description":"Show your inbox some love. The new Gmail tee has arrived, complete with a subtle Mvelope design that showcases all of the Gmail icons you use on the daily.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Features:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;52% cotton / 48% polyester.&lt;/li&gt;&lt;li&gt;Unisex fit.&lt;/li&gt;&lt;li&gt;Bella+Canvas.&lt;/li&gt;&lt;li&gt;Available in dark grey heather with the new Gmail print screenprinted across center chest.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;",
     "image":"data/images/10-13282B.jpg",
     "largeImage":"data/images/10-13282A.jpg",
-    "idImage":"eyeglass-13282"
+    "idImage":"eyeglass_10-13282"
   },
   {
     "name":"Christian+Dior-103",
@@ -117,6 +57,6 @@
     "description":"Show your inbox some love. The new Gmail tee has arrived, complete with a subtle Mvelope design that showcases all of the Gmail icons you use on the daily.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Features:&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li&gt;52% cotton / 48% polyester.&lt;/li&gt;&lt;li&gt;Unisex fit.&lt;/li&gt;&lt;li&gt;Bella+Canvas.&lt;/li&gt;&lt;li&gt;Available in dark grey heather with the new Gmail print screenprinted across center chest.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;",
     "image":"data/images/10-13269B.jpg",
     "largeImage":"data/images/10-13269A.jpg",
-    "idImage":"eyeglass-13269"
+    "idImage":"eyeglass_10-13269"
   }
 ]
