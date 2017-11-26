@@ -16,7 +16,7 @@ A online shopping website + app that supports dress up and make up online before
 
   npm install -g polymer 
 
-Install bower:
+[Install bower:](https://bower.io/)
 
   bower install
 
