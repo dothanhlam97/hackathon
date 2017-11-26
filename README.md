@@ -26,5 +26,13 @@ Start the development server
  
  #### Screenshot:
  ![GitHub Logo](/demo/image1-web-demo.png)
-Format: ![Alt Text](url)
+ 
+Home page
 
+![GitHub Logo](/demo/image2-web-demo.png)
+ 
+List items
+
+![GitHub Logo](/demo/image3-web-demo.png)
+ 
+ Item Details. You can scan QR code to try dressing up before "Add to cart".
