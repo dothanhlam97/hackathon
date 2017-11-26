@@ -53,6 +53,6 @@ List items
  
  Scanning QR code on mobile 
  
-  ![GitHub Logo](/demo/image2-web-demo.png)
+  ![GitHub Logo](/demo/image2-app-demo.png)
  
  
